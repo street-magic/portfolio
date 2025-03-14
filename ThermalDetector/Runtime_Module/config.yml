@@ -1,0 +1,56 @@
+#----------- Data source
+READ_FROM: MQTT
+MQTT:
+  USERNAME: marcel.walz
+  PASSWORD:
+  ADDRESS: 192.168.1.80
+  ADDRESS-L: localhost
+  PORT: 1883
+
+
+#----------- Sensor related config
+FOV:
+  TOF_BIG: 45     # Big 8x8 sensor: 45deg,
+  TOF_SMALL: 20   # Small sensor all SPADs: ~20deg
+  THERMAL: 40
+RESOLUTION:
+  # TOF: is dynamic. Either 8,4,3 or 2
+  THERMAL: 8  # 8x8
+
+
+#----------- Visualizer specific config
+TEMP:
+  MIN: 19 # degrees
+  MAX: 26
+VIEW_LIMITS:
+  - 5 # X meters
+  - 5 # Y meters
+
+#F8:60:BB:C0:58:A6
+#----------- Environment specific config
+CEILING_HEIGHT: 288  # cm
+ZONE_0: # thermal zone am Fussende Schief aufs Bett
+  MAC_ADDRESS: EC:8D:88:35:49:F9
+  LOC:
+    - 0
+    - -1.45
+ZONE_1: # foot zone  - gerade runter
+  MAC_ADDRESS: DF:37:5B:6B:FA:A9
+  LOC:
+    - 0
+    - -1.54
+ZONE_2: # Right zone - vom Fußende gesehen rechts
+  MAC_ADDRESS: F0:4C:E9:43:98:AF
+  LOC:
+    - 1
+    - 0
+ZONE_3: # Left zone
+  MAC_ADDRESS: CC:F4:CF:F7:44:85
+  LOC:
+    - -1 # von mitte des bettes 1m nach links
+    - 0
+ZONE_4:
+  MAC_ADDRESS: F8:60:BB:C0:58:A6
+  LOC:
+    - 0
+    - -1.45

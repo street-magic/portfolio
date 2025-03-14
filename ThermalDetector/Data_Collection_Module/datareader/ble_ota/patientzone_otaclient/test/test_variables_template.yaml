@@ -1,0 +1,5 @@
+# adjust my values to your need and copy me to "test_variables.py"
+
+COMMON:
+  MAC : ""  # mac of dut
+  OTA_FILE : ""  # test_ota
